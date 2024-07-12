@@ -24,7 +24,7 @@
     data() {
       return {
         newChar: "",
-        chars: ["sdsd"]
+        chars: []
       }
     },
     methods: {
