@@ -24,7 +24,7 @@
     data() {
       return {
         newChar: "",
-        chars: [dsd]
+        chars: []
       }
     },
     methods: {
@@ -49,9 +49,9 @@
 *:focus{
   outline: none;
 }
-.delete{
+/* .delete{
   
-}
+} */
 body{
   background-color: rgb(46, 27, 82);
   display: flex;
