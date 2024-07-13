@@ -9,7 +9,7 @@
     <button class="delete" v-if="chars.length != 0" @click="deleteAll">Delete all</button>
     
   </ul>
-  <character-input/>
+  <character-input @add-character="addNewCharacter($event)"/>
     
   
 </template>
