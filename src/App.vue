@@ -9,17 +9,17 @@
     <button class="delete" v-if="chars.length != 0" @click="deleteAll">Delete all</button>
     
   </ul>
-    <character-input></character-input>
+    
   
 </template>
 
 <script>
 import Character from "./components/Character.vue"
-import CharacterInput from "./components/CharacterInput.vue"
+
   export default {
     components: {
       Character,
-      CharacterInput
+      
     },
     data() {
       return {
@@ -28,8 +28,8 @@ import CharacterInput from "./components/CharacterInput.vue"
       }
     },
     methods: {
-      addNewCharacter(){
-        this.chars.push(this.newChar)
+      addNewCharacter(e){
+        this.chars.push(e)
         
       },
      removeCharacter(index){
