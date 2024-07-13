@@ -28,9 +28,9 @@
       }
     },
     methods: {
-      /* addNewCharacter(){
+      addNewCharacter(){
         this.chars = this.chars.push(this.newChar);
-      } */
+      },
      removeCharacter(index){
       this.chars.splice(index, 1);
      },
