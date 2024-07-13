@@ -9,18 +9,17 @@
     <button class="delete" v-if="chars.length != 0" @click="deleteAll">Delete all</button>
     
   </ul>
-  <form @submit.prevent="addNewCharacter">
-    <input type="text" required="true" placeholder="Add character here" v-model="newChar"/><br>
-    <button class="button-30" role="button" >Add Character</button>
-  </form>
+    <character-input></character-input>
   
 </template>
 
 <script>
 import Character from "./components/Character.vue"
+import CharacterInput from "./components/CharacterInput.vue"
   export default {
     components: {
       Character,
+      CharacterInput
     },
     data() {
       return {
