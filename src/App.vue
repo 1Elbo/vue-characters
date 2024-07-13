@@ -1,7 +1,8 @@
 <template>
   <h1>Characters</h1>
   <h2 v-if="chars.length===0">No characters added yet</h2>
-  <ul>
+  <button class="button-30" role="button" @click="showUl">{{ ulShow === true ? "Hide" : "Show"}} </button>
+  <ul v-if="ulShow === true">
     <li dude="char" v-for ="(char, index) in chars" :key="index">
       
       <character :name="char"
@@ -27,7 +28,8 @@ import CharacterInput from './components/CharacterInput.vue'
     data() {
       return {
         newChar: "",
-        chars: []
+        chars: [],
+        ulShow: true
       }
     },
     methods: {
@@ -41,6 +43,10 @@ import CharacterInput from './components/CharacterInput.vue'
      },
      deleteAll(){
       this.chars = [];
+     },
+     showUl(){
+      this.ulShow = !this.ulShow;
+      console.log(this.ulShow)
      }
     }
   }
