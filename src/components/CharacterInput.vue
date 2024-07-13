@@ -7,7 +7,17 @@
 
 <script>
     export default {
-        
+        data() {
+            return {
+                newChar: ""
+            }
+        },
+        methods: {
+            formSubmitted() {
+                console.log(this.newChar)
+                this.$emit("add-character", this.newChar)
+            }
+        },
     }
 </script>
 
