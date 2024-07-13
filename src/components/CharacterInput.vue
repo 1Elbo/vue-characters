@@ -1,6 +1,6 @@
 <template>
-    <form @submit.prevent="addNewCharacter">
-    <input type="text" required="true" placeholder="Add character here" v-model="newChar"/><br>
+    <form @submit.prevent="formSubmitted">
+    <input type="text" required="true" placeholder="Add character here" @input="valueChanged" v-model="newChar"/><br>
     <button class="button-30" role="button" >Add Character</button>
   </form>
 </template>
