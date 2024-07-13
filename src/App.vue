@@ -15,11 +15,11 @@
 
 <script>
 import Character from "./components/Character.vue"
-
+import CharacterInput from './components/CharacterInput.vue'
   export default {
     components: {
       Character,
-      
+      CharacterInput
     },
     data() {
       return {
