@@ -12,8 +12,8 @@
     <button class="delete" v-if="chars.length != 0" @click="deleteAll">Delete all</button>
     
   </ul>
-  <form @submit.prevent="chars.push(newChar)">
-    <input type="text" placeholder="Add character here" v-model="newChar"/><br>
+  <form @submit.prevent="addNewCharacter">
+    <input type="text" required="true" placeholder="Add character here" v-model="newChar"/><br>
     <button class="button-30" role="button" >Add Character</button>
   </form>
   
@@ -29,7 +29,8 @@
     },
     methods: {
       addNewCharacter(){
-        this.chars = this.chars.push(this.newChar);
+        this.chars.push(this.newChar)
+        
       },
      removeCharacter(index){
       this.chars.splice(index, 1);
