@@ -4,7 +4,9 @@
   <ul>
     <li dude="char" v-for ="(char, index) in chars" :key="index">
       
-      <character :name="char"></character>
+      <character :name="char"
+      :id="index"
+      @return-index="removeCharacter($event)"></character>
     </li>
     <button class="delete" v-if="chars.length != 0" @click="deleteAll">Delete all</button>
     
@@ -35,6 +37,7 @@ import CharacterInput from './components/CharacterInput.vue'
       },
      removeCharacter(index){
       this.chars.splice(index, 1);
+      console.log(index)
      },
      deleteAll(){
       this.chars = [];
