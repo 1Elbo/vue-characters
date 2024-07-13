@@ -2,8 +2,9 @@
   <h1>Characters</h1>
   <h2 v-if="chars.length===0">No characters added yet</h2>
   <ul>
-    <li v-for="(char, index) in chars" :key="index">
-      <character></character>
+    <li dude="char" v-for ="(char, index) in chars" :key="index">
+      
+      <character :name="char"></character>
     </li>
     <button class="delete" v-if="chars.length != 0" @click="deleteAll">Delete all</button>
     
