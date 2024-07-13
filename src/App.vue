@@ -3,11 +3,7 @@
   <h2 v-if="chars.length===0">No characters added yet</h2>
   <ul>
     <li v-for="(char, index) in chars" :key="index">
-      {{ char }}
-      <div class="cross" @click="removeCharacter">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-      </div>
+      <character></character>
     </li>
     <button class="delete" v-if="chars.length != 0" @click="deleteAll">Delete all</button>
     
@@ -20,7 +16,11 @@
 </template>
 
 <script>
+import Character from "./components/Character.vue"
   export default {
+    components: {
+      Character,
+    },
     data() {
       return {
         newChar: "",
